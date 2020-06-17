@@ -3,9 +3,25 @@ Input: a List of integers
 Returns: a List of integers
 '''
 def product_of_all_other_numbers(arr):
-    # Your code here
+    updated_arr = [0] * len(arr)
+    # for every index in range 0 - length of array
+    for i in range(0, len(arr)):
+        # for every index save a copy of the array
+        copy = arr.copy()
+        # on each pass the index becomes 1 instead so 2 becomes 1 for example as if it's not there.
+        copy[i] = 1
+        # setting as placeholder of 1 so we can replace it as the product
+        total = 1
+        # for every value in the copied array
+        for val in copy:
+            # set the total to equal the product of each value in copied arr.
+            total = total * val
+        # update the array we made as the total
+        updated_arr[i] = total
+    # return updated array
+    return updated_arr
 
-    pass
+
 
 
 if __name__ == '__main__':
