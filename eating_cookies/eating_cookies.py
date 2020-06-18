@@ -2,6 +2,8 @@
 Input: an integer
 Returns: an integer
 '''
+# still having a hard time grasping this particular project but I don't think I can make it any more efficient.
+
 # we initialize the function with memory set to None
 def eating_cookies(n, memory=None):
     cookies = n
